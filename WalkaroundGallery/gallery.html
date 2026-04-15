@@ -11,77 +11,109 @@
     
 
 <a-scene>
-
-
-<a-plane 
-        src="#plank_diff" 
-        normal-map="#plank_nor" 
-        roughness-map="#plank_rough"
-        ambient-occlusion-map="#plank_ao" 
-        rotation="-90 0 0" 
-        width="20" 
-        height="20" 
-        position="0 0 1.5"
-        repeat="10 10"
-        material="roughness: 1; metalness: 0">
-     
-      </a-plane>
-
-<a-sky color="#D3D3D3"></a-sky>
-    <a-assets > 
+  <a-assets > 
         
        <img id="plank_diff" src="../assets/textures/plank/plank_flooring_04_diff_1k.png" alt="">
-       
+       <img id="white_diff" src="../assets/textures/brick/white_plaster_02_diff_1k.png" alt="">
 
     <img id="Wall1" src="../assets/images/Wall1_SamC.png">
     <img id="Wall2" src="../assets/images/Wall2_SamC.png">
     <img id="Wall3" src="../assets/images/Wall3_SamC.png">
     <img id="Wall4" src="../assets/images/Wall4_SamC.png">
     <img id="Wall5" src="../assets/images/Wall5_Samc.png">
+    <img id="Wall6" src="../assets/images/Wall6me.png">
         
-        <a-mixin id="wall" geometry="primative: box; width: 5.7; height:3;"></a-mixin>
+        <a-mixin id="wall" geometry="primative: box; width: 5.7; height:3;" shadow></a-mixin>
     <a-mixin id="primary" material="color:#fffaed"></a-mixin>
-    
-    </a-assets>
+  
+    <a-asset-item id="SamCookeLogo" src="3dmodels/SamCooke.gltf"></a-asset-item>
 
-    <a-entity id="main-hall">
+    <a-asset-item id="turntable" src="3dmodels/turntable.glb"></a-asset-item>
+
+    <a-asset-item id="SamDate" src="3dmodels/Sam_Date.gltf"></a-asset-item>
+
+    <a-asset-item id="SamCookedate" src="3dmodels/SamCookedate.gltf"></a-asset-item>
+
+  </a-assets>
+
+<a-gltf-model src="#SamCookeLogo" position="-6.612 1.899 2.974" scale="0.057 0.048 -0.001" rotation="0.090 90 0" light="intensity: 1; type: ambient; color: #fefcdd; groundColor: #ffffff" width="8" height="1.4113" shadow></a-gltf-model>
+
+<a-gltf-model src="#turntable" position="-0.367 0.164 1.177" scale="2.5 2.5 2.5" rotation="0.090 -45 0" ></a-gltf-model>
+
+<a-gltf-model src="#SamCookedate" position="-6.586 1.658 2.939" scale="0.060 0.060 0.050" rotation="0.090 50 0" shadow></a-gltf-model>
+
+
+
+<a-plane src="#plank_diff" normal-map="#plank_nor" 
+roughness-map="#plank_rough" ambient-occlusion-map="#plank_ao" 
+rotation="-90 0 0" 
+width="20" 
+height="20" 
+position="-0.05 0 -3.52991" 
+repeat="10 10" 
+material="ambientOcclusionMap: ; normalMap: ; roughness: 1; roughnessMap: " scale="0.79 0.96 1.04" 
+shadow>
+     
+</a-plane>
+     
+<a-plane src="#white_diff" normal-map="#wood_diff" 
+roughness-map="#wood_rough" 
+ambient-occlusion-map="#wood_ao" 
+rotation="90.7 -0.04 -0.02" 
+width="20"
+height="20" 
+position="0.06076 3.15558 -3.88445"
+repeat="10 10" 
+material="ambientOcclusionMap: ; normalMap: ; roughness: 1; roughnessMap: " scale="0.79 1 1.06">
+     
+</a-plane>
+    
+
+<a-sky color="#544d43"></a-sky>
+    
+
+<a-entity id="main-hall" rotation="0 0 0" position="0 0 -10">
         <a-entity mixin="wall primary " position="-7.45765 1.5 7.251" rotation="0.33 90 0"></a-entity>
         <a-entity mixin="wall primary" position="7.458 1.5 7.251" rotation="0.33 90 0"></a-entity>
         
-        <a-entity mixin="wall primary" position="-5.203 1.5 2.14493" rotation="0 45 0"></a-entity>
-        <a-entity mixin="wall primary" position="5.2 1.5 2.14493" rotation="0 -45 0"></a-entity>
-        <a-entity mixin="wall primary" position="0 1.5 0" shadow></a-entity>
+        <a-entity mixin="wall primary" position="-7.18077 1.5 7.251" rotation="0.33 90 0"></a-entity>
+        <a-entity mixin="wall primary" position="7.30249 1.5 7.251" rotation="0.33 90 0"></a-entity>
+        <a-entity mixin="wall primary" position="0 1.5 0" ></a-entity>
+       <a-entity mixin="wall primary" position="-7.28589 1.5 13.07437" rotation="0.33 90 0" scale="1.05 1 1.25"></a-entity>
+        <a-entity mixin="wall primary" position="7.378 1.5 13.07715" rotation="0.33 90 0" scale="1.04 1 1.25"></a-entity>
 
-
-<a-plane width="5.7" height="3" rotation="0 -90 0" material="src: #Wall5" position="6.92271 1.52287 7.23815"></a-plane>
+<a-plane width="5.7" height="3" rotation="0 -90 0" material="src: #Wall5" position="6.75924 1.4975 7.28647"></a-plane>
 
 <a-plane width="5.7" height="3" rotation="0 44.92 0" material="src: #Wall2" position="-4.81922 1.49175 2.55233"></a-plane>
 
-<a-plane width="5.7" height="3" rotation="0 90 0" material="src: #Wall1" position="-6.92443 1.47775 7.26929"></a-plane>
+<a-plane width="5.7" height="3" rotation="0 90 0" material="src: #Wall1" position="-6.66231 1.47775 7.23929"></a-plane>
 
 <a-plane width="5.7" height="3" material="src: #Wall3" position="0.04685 1.482 0.55642"></a-plane>
 
 <a-plane width="5.7" height="3" material="src: #Wall4" position="4.83355 1.47128 2.54196" rotation="0 -45.3 0"></a-plane>
 
+<a-plane width="5.7" height="3" rotation="0 -90.05 0" material="src: #Wall6" position="6.72512 1.4975 13.19073"></a-plane>
 
 
-
-
-<a-entity position="-2.59663 0.11389 7.04996" rotation="0 90 0">
-  <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
-  <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
-  <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
-</a-entity>
+  <a-entity position="-2.59663 0.11389 7.04996" rotation="0 90 0">
+    <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
+    <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
+    <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
+  </a-entity>
     
     
-<a-entity position="2.18943 0.11389 7.05797" rotation="0 90 0">
-  <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
-  <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
-  <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
-</a-entity>
+  <a-entity position="2.18943 0.11389 7.05797" rotation="0 90 0">
+    <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
+    <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
+    <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
+  </a-entity>
 
 
-</a-entity>
+<a-entity light="type: point" position="-5.18421 2.65198 3.24595"></a-entity>
+<a-entity light="type: point" position="-5.43151 2.65198 11.5555"></a-entity>
+
+
+
 
 </a-scene>
 
