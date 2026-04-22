@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Cooke Vr Exhibition</title>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-</head>
 
     <script src="https://unpkg.com/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-blink-controls/dist/aframe-blink-controls.min.js"></script>
-
 </head>
 <body>
     
@@ -19,7 +17,7 @@
         
        <img id="plank_diff" src="../assets/textures/plank/plank_flooring_04_diff_1k.png" alt="">
        <img id="white_diff" src="../assets/textures/brick/white_plaster_02_diff_1k.png" alt="">
-       <img id="rubber_diff" src="../assets/textures/brick/rubber_tiles_diff_1k.png" alt="">
+      
 
     <img id="Wall1n" src="../assets/images/Wall1_SamCn.png">
     <img id="Wall2" src="../assets/images/Wall2_SamC.png">
@@ -28,7 +26,7 @@
     <img id="Wall5" src="../assets/images/Wall5_Samc.png">
     <img id="Wall6" src="../assets/images/Wall6me.png">
         
-        <a-mixin id="wall" geometry="primative: box; width: 5.7; height:3;" shadow></a-mixin>
+        <a-mixin id="wall" geometry="primitive: box; width: 5.7; height:3;" shadow></a-mixin>
     <a-mixin id="primary" material="color:#fffaed"></a-mixin>
   
     <a-asset-item id="SamCookeLogo" src="3dmodels/Sam cookegray.gltf"></a-asset-item>
@@ -127,11 +125,25 @@ material="ambientOcclusionMap: ; normalMap: ; roughness: 1; roughnessMap: " scal
     <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
   </a-entity>
 
+<a-entity light="type: point" position="-3.55913 2.9689 5.76161">
+  <a-cylinder color="black" height="0.2" radius="0.15" geometry="height: 0.04" position="-0.01798 0.14277 0">
+  </a-cylinder>
+</a-entity>
 
-<a-entity light="type: point" position="-3.48827 2.5768 3.96354"></a-entity>
-<a-entity light="type: point" position="3.20628 2.5768 4.29053"></a-entity>
-<a-entity light="type: point" position="4.47353 2.57567 9.33514"></a-entity>
-<a-entity light="type: point" position="-5.43151 2.9689 12.79632"></a-entity>
+<a-entity light="type: point" position="2.31228 2.9689 4.66203">
+  <a-cylinder color="black" height="0.2" radius="0.15" geometry="height: 0.04" position="0.00384 0.14277 0.10887">
+  </a-cylinder>
+</a-entity>
+
+<a-entity light="type: point" position="4.58222 2.9689 8.49424">
+  <a-cylinder color="black" height="0.2" radius="0.15" geometry="height: 0.04" position="-0.04759 0.14277 0.03661">
+  </a-cylinder>
+</a-entity>
+
+<a-entity light="type: point" position="-5.43151 2.9689 12.79632">
+  <a-cylinder color="black" height="0.2" radius="0.15" geometry="height: 0.04" position="0 0.09473 0">
+  </a-cylinder>
+</a-entity>
 
 <a-plane id="Mat" src="#Mat" material="transparent: true"
  position="0 0.02772 3.47806" rotation="-90 0 0" width="1.8" height="1"
@@ -141,9 +153,7 @@ material="ambientOcclusionMap: ; normalMap: ; roughness: 1; roughnessMap: " scal
 
 
 
-
-<a-box id="rubber_diff" 
-src="#rubber_diff"
+<a-box 
 position="2.52078 0.1 11.89974"
  width="6" height="0.2" depth="3" 
  material="repeat: 2 1; color: #444" 
@@ -194,13 +204,34 @@ position="2.52078 0.1 11.89974"
 <a-entity id="stanchion-right" position="3.2 0.56164 14.27873">
   <a-cylinder radius="0.05" height="1.1" color="#FFD700" metalness="0.8" position="0.11316 0.06893 -0.04128"></a-cylinder>
   <a-cylinder radius="0.15" height="0.02" color="#FFD700" position="0.19836 -0.54 -0.12893"></a-cylinder>
+  
 </a-entity>
 
  <a-torus id="red-rope" arc="100" radius="3.2" radius-tubular="0.03" position="2.02888 2.33638 13.09991" rotation="14.22807 149.02959 -143.26294005230616" color="black" scale="0.65 0.62 0.95">
 </a-torus>
 
 
+<a-entity position="-2.63682 0 12.80735" rotation="0 180 0" id="chair" scale="0.83 0.75 3.1">
+  <a-box position="0 0.4 0" width="1.2" height="0.8" depth="1.2" color="#222" scale="1 0.72 0.89"></a-box>
+  
+  <a-box position="0 0.6 0" width="1.0" height="0.45" depth="1.0" color="#444" material="roughness: 1" scale="1.01 0.99 1.04"></a-box>
+  
+  <a-box position="0 0.55 0" width="0.95" height="0.4" depth="0.95" color="#f5f5f5" material="roughness: 0.9" scale="1 0.68 1"></a-box>
+  
+  <a-box position="-0.5 0.9 0" width="0.2" height="1" depth="1.2" color="#222"></a-box>
+</a-entity>
 
+<a-box id="pillow" position="-2.52794 0.87747 11.73733" 
+width="0.7" height="0.7" depth="0.3" rotation="-6.38 -69.8 -1.13"
+ color="#daa520" material="roughness: 0.9" shadow=""
+  scale="0.99 0.66 0.19">
+</a-box>
+
+<a-box id="pillow-2" position="-2.47117 0.87747 13.99488" 
+width="0.7" height="0.7" depth="0.3" rotation="-6.38 -109.2 -1.13" 
+color="#daa520" material="roughness: 0.9" shadow="" 
+scale="0.99 0.66 0.19">
+</a-box>
 
 
 
@@ -217,9 +248,9 @@ position="2.52078 0.1 11.89974"
 
 
 
-
-
 </a-scene>
+</body>
+</html>
 
 
 
