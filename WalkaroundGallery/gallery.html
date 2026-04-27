@@ -76,19 +76,33 @@
 
 
 
-    
+<!--     
+<video id="TheSoulStirrers" 
+         autoplay="true" 
+         loop="true" 
+         muted="true" 
+         playsinline 
+         webkit-playsinline
+         crossorigin="anonymous" 
+         src="../assets/videos/TheSoulStirrers.mp4">
+  </video> -->
 
-      <video id="The SoulStirrers" autoplay loop="true" muted="true" playsinline webkit-playsinline
-        crossorigin="anonymous" src="../assets/videos/TheSoulStirrers.mp4" type="video/mp4">
-      </video>
+      <video id="stirrers" autoplay loop="true" src="../assets/videos/TheSoulStirrers.mp4 "
+      ></video>
 
     </a-assets>
 
-  
-    <a-plane src="#The SoulStirrers" width="3" height="2" position="-5.71088 1.2871 -6.50044" rotation="0 45.11 0"
-      material="shader: flat" geometry="height: 1.28; width: 1.73">
-    </a-plane>
+  <!-- <a-plane src="#TheSoulStirrers" 
+  position="-5.65086 1.2871 -6.5065" 
+  rotation="0 45.11 0" width="1.73" height="1.28" material="shader: flat">
+</a-plane> -->
 
+  <a-video src="#stirrers" width="16" height="9" position="0 0 -20"></a-video>
+
+<a-box position="-5.71088 1.2871 -6.55336" 
+rotation="0 45.11 0" width="1.8" height="1.35" 
+depth="0.1" color="#222" shadow="">
+</a-box>
     <a-gltf-model src="#Samcookegray" position="-6.612 1.899 2.974" scale="0.057 0.048 -0.001" rotation="0.090 90 0"
       light="intensity: 1; type: ambient; color: #fefcdd; groundColor: #ffffff" width="8" height="1.4113"
       shadow></a-gltf-model>
