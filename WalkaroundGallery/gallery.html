@@ -68,6 +68,8 @@
 
       <a-asset-item id="Vinyl" src="3dmodels/vinyl.glb"></a-asset-item>
 
+       <a-asset-item id="Piano" src="3dmodels/Piano.glb"></a-asset-item>
+
       <audio id="YouSendMe" src="../assets/audio/YouSendMe.mp4" preload="auto"></audio>
       <audio id="OnlySixteen" src="../assets/audio/OnlySixteen.mp4" preload="auto"></audio>
       <audio id="WonderfulWorld" src="../assets/audio/WonderfulWorld.mp4" preload="auto"></audio>
@@ -78,7 +80,7 @@
 
 
 
-      <video id="stirrers" autoplay loop="true" src="../assets/videos/TheSoulStirrers.mp4 "
+      <video id="stirrers" autoplay loop="true" src="../assets/videos/TheSoulStirrers.mp4 "  muted="true" playsinline
       ></video>
 
     </a-assets>
@@ -98,6 +100,10 @@ depth="0.1" color="#222" shadow="">
 
     <a-gltf-model src="#SamCookedate" position="-6.586 1.658 2.939" scale="0.060 0.060 0.050" rotation="0.090 50 0"
       shadow></a-gltf-model>
+
+      <a-gltf-model src="#Piano" position="1.99622 0.19726 1.23467" scale="0.71 0.68 0.96" 
+      rotation="0.09 115.90000000000002 0" shadow="" 
+      gltf-model="3dmodels/Piano.glb" id="Piano"></a-gltf-model>
 
     <a-gltf-model src="#Vinyl" id="Vinyl1" class="clickable"
   play-snippet="audioId: #YouSendMe; duration: 17000"
@@ -176,15 +182,15 @@ depth="0.1" color="#222" shadow="">
         scale="1.05 0.99 1"></a-plane>
 
 
-      <a-entity position="-2.59663 0.11389 7.04996" rotation="0 90 0">
-        <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
+      <a-entity position="-2.59663 0.11389 7.04996" rotation="0 90 0" id="bench1">
+        <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#2f419a"></a-box>
         <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
         <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
       </a-entity>
 
 
-      <a-entity position="2.18943 0.11389 7.05797" rotation="0 90 0">
-        <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#c7a82e"></a-box>
+      <a-entity position="2.18943 0.11389 7.05797" rotation="0 90 0" id="bench2">
+        <a-box position="0 0.45 0" width="2" height="0.1" depth="0.6" color="#2f419a"></a-box>
         <a-box position="-0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
         <a-box position="0.8 0.22 0" width="0.05" height="0.45" depth="0.5" color="#222"></a-box>
       </a-entity>
@@ -211,24 +217,19 @@ depth="0.1" color="#222" shadow="">
       </a-entity>
 
 
-
-
-
-
-      <a-box position="2.52078 0.1 11.89974" width="6" height="0.2" depth="3" material="repeat: 2 1; color: #444"
-        shadow="" scale="0.53 1 1">
+<a-box position="2.52078 0.1 11.75147" width="6" height="0.2" depth="3" material="repeat: 2 1; color: #000000" shadow="" scale="0.53 1 1.33" id="Stage">
       </a-box>
 
 
 
-      <a-entity id="mic-stand" position="2.20318 0.2 12.17916" scale="0.5 0.5 0.5">
+      <a-entity id="mic-stand" position="2.20318 0.2 12.483" scale="0.5 0.5 0.5">
 
         <a-cylinder color="#222" height="0.05" radius="0.3"></a-cylinder>
 
         <a-cylinder color="#c7a82e" height="3" radius="0.03" position="0 1.5 0"></a-cylinder>
 
         <a-sphere position="0 3.1 0" radius="0.15" scale="0.77 1.16 0.88"
-          material="color: #ccc; metalness: 0.8; roughness: 0.2" geometry="radius: 0.26; thetaLength: 179.96"
+          material="color: #000000; metalness: 0.8; roughness: 0.2" geometry="radius: 0.26; thetaLength: 179.96"
           rotation="-0.51508905782261 0.8090164067247224 -18.1925559109939">
           <a-ring color="#333" radius-inner="0.15" radius-outer="0.16" rotation="90 0 0"></a-ring>
         </a-sphere>
@@ -236,9 +237,9 @@ depth="0.1" color="#222" shadow="">
       </a-entity>
 
 
-      <a-entity id="stage-stool" position="3.04056 0.2 12.3177" scale="0.8 0.8 0.8">
+      <a-entity id="stage-stool" position="3.04056 0.2 12.633" scale="0.8 0.8 0.8">
 
-        <a-cylinder position="0 1.2 0" radius="0.25" height="0.1" material="color: #222; roughness: 0.8"
+        <a-cylinder position="0 1.2 0" radius="0.25" height="0.1" material="color: #000000; roughness: 0.8"
           scale="1.21 1 1.5">
         </a-cylinder>
 
@@ -246,10 +247,10 @@ depth="0.1" color="#222" shadow="">
         </a-cylinder>
 
         <a-torus position="0 0.3 0" radius="0.15" radius-tubular="0.01" rotation="90 0 0"
-          material="color: #999; metalness: 0.7">
+          material="color: #000000; metalness: 0.7">
         </a-torus>
 
-        <a-cylinder position="0 0.02 0" radius="0.2" height="0.04" material="color: #333; metalness: 0.5">
+        <a-cylinder position="0 0.02 0" radius="0.2" height="0.04" material="color: #000000; metalness: 0.5">
         </a-cylinder>
 
       </a-entity>
