@@ -319,12 +319,16 @@ material="opacity: 0.8; transparent: true" shadow="">
               position="0 0 -1"
               material="color: #FFD700; shader: flat">
     </a-entity>
-  </a-entity>
-  
-  <a-entity id="left-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: left" blink-controls></a-entity>
-  <a-entity id="right-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: right" blink-controls></a-entity>
+  <a-entity id="left-hand" 
+          oculus-touch-controls="hand: left" 
+          blink-controls="cameraRig: #player; teleportOrigin: #camera; collisionEntities: .floor">
 </a-entity>
 
+<a-entity id="right-hand" 
+          oculus-touch-controls="hand: right" 
+          raycaster="objects: .clickable; showLine: true; far: 10" 
+          line="color: #FFD700; opacity: 0.5">
+</a-entity>
 
   </a-scene>
 </body>
