@@ -85,9 +85,8 @@
 
     </a-assets>
 
-  
 
-  <a-video src="#stirrers" position="-5.65086 1.2871 -6.5065" geometry="primitive: plane; height: 1.28; width: 1.73" rotation="0 45.11 0"></a-video>
+  <a-video src="#stirrers" position="-5.65086 1.2871 -6.5065"geometry="primitive: plane; height: 1.28; width: 1.73" rotation="0 45.11 0"></a-video>
 
 <a-box position="-5.71088 1.2871 -6.55336" 
 rotation="0 45.11 0" width="1.8" height="1.35" 
@@ -313,31 +312,19 @@ material="opacity: 0.8; transparent: true" shadow="">
 
 
 
-
-      <a-entity id="player" position="0 1.6 10">
-        <!-- camera -->
-        <a-entity id="camera" camera wasd-controls look-controls></a-entity>
-        <!-- hand controls -->
-        <a-entity id="left-hand" raycaster="objects: .floor" oculus-touch-controls="hand: left"
-          blink-controls></a-entity>
-        <a-entity id="right-hand" raycaster="objects: .floor" oculus-touch-controls="hand: right"
-          blink-controls></a-entity>
-      </a-entity>
-
-
-
-
-        <a-entity cursor="fuse: false; rayOrigin: mouse;"
-                  raycaster="objects: .clickable"
-                  position="0 0 -1"
-                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                  material="color: #FFD700; shader: flat">
-        </a-entity>
-
-      <a-entity id="left-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: left" blink-controls></a-entity>
-      <a-entity id="right-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: right" blink-controls></a-entity>
+<a-entity id="player" position="0 0 10">
+  <a-entity id="camera" camera wasd-controls look-controls position="0 1.6 0">
+    <a-entity cursor="fuse: false; rayOrigin: mouse;"
+              raycaster="objects: .clickable"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+              material="color: #FFD700; shader: flat">
     </a-entity>
-
+  </a-entity>
+  
+  <a-entity id="left-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: left" blink-controls></a-entity>
+  <a-entity id="right-hand" raycaster="objects: .floor, .clickable" oculus-touch-controls="hand: right" blink-controls></a-entity>
+</a-entity>
 
 
   </a-scene>
